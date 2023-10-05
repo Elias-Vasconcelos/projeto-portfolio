@@ -1,0 +1,107 @@
+@import url('http://fonts.googleapis.com/css2?family=poppins:wght@300;400;500;600;700;800;900&display=swap');
+    * {
+        margin: 0;
+        padding:0;
+        box-sizing: border-box;
+        font-family:'poppins', sans-serif ;
+    }
+    body {
+        background-color: #081b29;
+        color: #ededed;
+    }
+    .cabeçario{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 20px 10%;
+        background: transparent;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 100;
+    }
+    .logo{
+        font-size: 28px;
+        color: #ededed;
+        text-decoration: none;
+        font-weight: 600;
+    }
+    .barra-navegaçao a {
+        font-size: 18px;
+        color: #ededed;
+        text-decoration: none;
+        font-weight: 500;
+        margin-left:  35px;
+        transition: 1,5s;
+    }
+    .barra-navegaçao a:hover,
+    .barra-navegaçao a.active{
+        color: #00abf0;
+    }
+    .apresentaçao{
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        padding: 0 10%;
+    }
+    .biograf{
+        max-width: 600px;
+    }
+    .biograf h1 {
+        font-size: 52px;
+        font-weight: 700;
+        display: flex;
+        line-height: 2;
+    }
+    .biograf h3{
+        font-size: 36px;
+        font-weight: 700;
+        color:#00abf0
+    }
+    .biograf p {
+        font-size: 18px;
+        margin: 20px 0 40px;
+
+    }
+    .apresentaçao .btn-box{
+        width: 345px;
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .btn-box a {
+        position: relative;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 150px;
+        height: 100%;
+        color: #00abf0;
+        border: 2px solid #00abf0;
+        border-radius: 8px;
+        font-size: 19px;
+        color: #081b29;
+        text-decoration: none;
+        font-weight: 600;
+        letter-spacing: 1px;
+        z-index: 1;
+        overflow: hidden;
+    }
+    .btn-box a:nth-child(2) {
+        background: #00abf0
+    }
+    .btn-box a::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background: #081b29;
+        z-index: -1;
+        transition: 1S;
+    }
+    .btn-box a:hover::before{
+        width: 100%;
+    }
