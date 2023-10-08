@@ -6,7 +6,6 @@
         font-family:'poppins', sans-serif ;
     }
     body {
-        background-color: #081b29;
         color: #ededed;
     }
     .cabeçario{
@@ -22,11 +21,24 @@
         z-index: 100;
     }
     .logo{
+        position: relative;
         font-size: 28px;
         color: #ededed;
         text-decoration: none;
         font-weight: 600;
     }
+    .logo::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background: #081b29;
+        animation: showRight 1s ease forwards;
+        animation-delay: .4s;
+    }
+    
     .barra-navegaçao a {
         font-size: 18px;
         color: #ededed;
@@ -41,31 +53,81 @@
     }
     .apresentaçao{
         height: 100vh;
+        background: url('./text3.png') no-repeat;
+        background-size: cover;
+        background-position: center;
         display: flex;
         align-items: center;
         padding: 0 10%;
     }
     .biograf{
-        max-width: 600px;
+        max-width: 700px;
     }
     .biograf h1 {
         font-size: 52px;
-        font-weight: 700;
-        display: flex;
+        font-weight: 600;
+        position: relative;
         line-height: 2;
+    }
+    .biograf h1::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background: #081b29;
+        animation: showRight 1s ease forwards;
+        animation-delay: 1s;
     }
     .biograf h3{
         font-size: 36px;
         font-weight: 700;
-        color:#00abf0
+        color:#00abf0;
+        position: relative;
+    }
+    .biograf h3::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background: #081b29;
+        animation: showRight 1s ease forwards;
+        animation-delay: 1.5s;
     }
     .biograf p {
         font-size: 18px;
         margin: 20px 0 40px;
-
+        position: relative;
+    }
+    .biograf p::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background: #081b29;
+        animation: showRight 1s ease forwards;
+        animation-delay: 1.9s;
+    }
+    .btn-box::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background: #081b29;
+        animation: showRight 1s ease forwards;
+        animation-delay: 2s;
+        z-index: 2;
     }
     .apresentaçao .btn-box{
         width: 345px;
+        position: relative;
         height: 50px;
         display: flex;
         justify-content: space-between;
@@ -126,6 +188,18 @@
         display: flex;
         justify-content: space-between;
     }
+    .direcionais:before{
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background: #081b29;
+        animation: showRight 1s ease forwards;
+        animation-delay: 1.9s;
+        z-index: 2;
+    }
     .direcionais a{
         position: relative;
         display: inline-flex;
@@ -157,4 +231,33 @@
         width: 100%;
         border-radius: 70%;
         font-size: 20px;
+    }
+    .foto{
+        position: relative;
+        top: 0;
+        right: 30px;
+        width: 900px;
+        height: 100%;
+        background: transparent;
+        transition: 2s;
+    }
+    .foto::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background: #081b29;
+        animation: showRight 1s ease forwards;
+        animation-delay: 2.5s;
+    }
+    .foto:hover{
+        background: #081b29;
+        opacity: .7;
+    }
+    @keyframes showRight {
+        100%{
+            width: 0;
+        }
     }
